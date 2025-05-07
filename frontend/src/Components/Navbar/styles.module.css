@@ -1,0 +1,40 @@
+
+.container{
+  padding: 1.2rem;
+  border-bottom: 1px solid #eaeaea;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navBar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar h1{
+  cursor: pointer;
+  color: #0d80cc;
+}
+
+.navBarOptionContainer{
+  display: flex;
+  gap: 1rem;
+}
+
+.navBarOption{
+  cursor: pointer;
+  color: #0d80cc;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.buttonJoin{
+  color: #0d80cc;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 2px solid #0d80cc;
+  padding: 0.5rem 1rem;
+  border-radius: .5rem;
+}
