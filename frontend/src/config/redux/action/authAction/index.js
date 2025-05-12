@@ -74,3 +74,19 @@ export const getAllUsers = createAsyncThunk(
   }
 );
 
+// export const getConnectionsRequest = createAsyncThunk(
+//   "user/getConnectionsRequest",
+//   async (token, thunkAPI) => {
+//     try{
+//       const response = await clientServer.get("/user/my_connections_requests",{
+//         params: {
+//           token
+//         }
+//       });
+//       return thunkAPI.fulfillWithValue(response.data);
+//     }catch (error) {
+//       return thunkAPI.rejectWithValue(error.response.data);
+//     }
+//   }
+// );
+
