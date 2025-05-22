@@ -7,6 +7,7 @@ import crypto from 'crypto';
 
 import PDFDocument from 'pdfkit';
 import fs from 'fs';
+import { equal } from 'assert';
 
 // function uses in constructor
 
@@ -230,6 +231,10 @@ const sendConnectionRequest = async (req, res, next) => {
     return res.status(400).json({message: 'Connection request already sent.'});
   };
 
+  if(user._id.toString() === connectionId) {
+    return res.status(400).json({message: 'You cannot connect with yourself.'});
+  };
+
   const newConnection = new ConnectionRequest({userId: user._id, connectionId});
   await newConnection.save();
 
@@ -237,7 +242,7 @@ const sendConnectionRequest = async (req, res, next) => {
 };
 
 const getMyConnectionsRequest = async (req, res, next) => {
-  const {token} = req.body;
+  const {token} = req.query;
   if(!token) {
     return res.status(400).json({message: 'Invalid request.'});
   };

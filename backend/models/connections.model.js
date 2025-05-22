@@ -8,6 +8,7 @@ const connectionSchema = mongoose.Schema({
   },
   connectionId: {
     type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
     required: true
   },
   stauts_accepted: {

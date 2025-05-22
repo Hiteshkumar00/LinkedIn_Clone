@@ -24,7 +24,7 @@
   overflow: auto;
 }
 
-.sideBatOption{
+.sideBarOption{
   display: flex;
   gap: .6rem;
   align-items: center;
@@ -36,21 +36,21 @@
   transform: all 0.2s ease-in-out;
 }
 
-.sideBatOption:hover{
+.sideBarOption:hover{
   background-color: #f5f5f5;
   border-radius: 3px;
 }
 
-.sideBatOption:active{
+.sideBarOption:active{
   background-color: #eaeaea;
   border-radius: 3px;
 }
 
-.sideBatOption > svg{
-  width: 1.4rem;
+.sideBarOption > svg{
+  height: 1.4rem;
 }
 
-.sideBatOption > span{
+.sideBarOption > span{
   font-size: 1rem;
 }
 
